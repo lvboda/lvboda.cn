@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>吕博达的个人站点 | Boda Lü's Website</title>
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="application-name" content="Boda Lü's Website" />
+    <meta name="msapplication-TileImage" content="/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Boda Lü's Website" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="description" content="吕博达的个人站点" />
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: calc(10px + 0.33vw);
+        -webkit-font-smoothing: antialiased;
+        padding: 5vh 10vw;
+        color: #121314;
+      }
+
+      h1 {
+        font-size: 4.5em;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 1.5em;
+        font-weight: 350;
+        max-width: 28em;
+      }
+
+      a {
+        text-decoration: none;
+        white-space: nowrap;
+        color: #505050;
+        position: relative;
+        transition-property: color;
+        transition-duration: 0.5s;
+      }
+
+      a:hover {
+        font-weight: 500;
+        color: darkcyan;
+      }
+
+      footer {
+        width: 80vw;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello!</h1>
+    <h2>Welcome to lvboda.cn</h2>
+    <p>▸ <a href="https://blog.lvboda.cn" target="_blank">个人博客（Blog）</a></p>
+    <p>▸ <a href="https://lvboda.cn/resume" target="_blank">在线简历（Resume）</a></p>
+    <p>▸ <a href="https://github.com/lvboda" target="_blank">Github</a></p>
+    <p><span id="arrows">▸ </span><a href="javascript:void(0)" onclick="onOtherClick()">个人项目</a></p>
+    <div id="list" style="display: none; margin-left: 30px;">
+      <p style="font-size: 1.1em;">▸ <a href="https://lvboda.cn/quick-chat" target="_blank">QuickChat</a></p>
+      <p style="font-size: 1.1em;">▸ <a href="https://lvboda.cn/video-tools" target="_blank">在线音视频处理工具（Video Tools）</a></p>
+    </div>
+
+    <footer>
+      <a href="mailto:lvboda705@gmail.com">lvboda705@gmail.com</a>
+      <a href="https://beian.miit.gov.cn/">辽ICP备2022007649号-2</a>
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21090402210935">辽公网安备 21090402210935号</a>  
+    </footer>
+  </body>
+
+  <script>
+    let flag = true;
+    function onOtherClick() {
+      const list = document.getElementById("list");
+      const arrows = document.getElementById("arrows");
+      if (flag) {
+        list.style.display = "block";
+        arrows.innerText = "▾ ";
+      } else {
+        list.style.display = "none";
+        arrows.innerText = "▸ ";
+      }
+      flag = !flag
+    }
+  </script>
+</html>
